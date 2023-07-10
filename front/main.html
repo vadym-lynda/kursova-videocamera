@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videocameras</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Стилі навігаційного меню -->
+    <link rel="stylesheet" href="css/navMenuStyle.css">
+    <!-- Стилі товарного блоку -->
+    <link rel="stylesheet" href="css/mainContent.css">
+    
+ 
+</head>
+
+<body>
+
+    <!-- NAV MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="home">VIDEOCAMERAS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button id="add-button" class="nav-button" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-info">
+                           <span class="button-content"> Добавити </span> 
+                        </button>
+                    </li>
+                </ul>
+                <form method="GET" class="d-flex form-filter" onsubmit="searchProducts(event)" >
+                    <input type="search" id="search-for-card" class="input" placeholder="Пошук...">
+                    <button class="nav-button" type="submit">
+                     <span class="button-content"> Пошук </span>
+                    </button>
+                    <ul class="navbar-nav">
+                       
+                       
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- NAV MENU -->
+
+    
+
+    <!-- Головний контент -->
+    <section class="main-content">
+        <div class="container">
+            <div class="row" id="product-container">
+
+            </div>
+        </div>
+        <div id="pagination-container">
+
+        </div>
+    </section>
+
+  
+    <!-- Модальне вікно додавння кароточки товару -->
+    <div class="modal" id="modal-add-info" tabindex="-1">
+        <div class="modal-dialog">
+            <form method="post" class="modal-content" id="modal-body-info">
+                <div class="modal-header">
+                    <h5 class="modal-title">Панель додавання товару</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="file">
+                        <input id="product-name" placeholder="Заголовок" type="text">
+                        <input id="product-model" placeholder="Модель" type="text">
+                        <input id="product-resolution" placeholder="Роздільна здатність" type="text">
+                        <input id="product-interface" placeholder="Інтерфейс підключення" type="text">
+                        <input id="product-frame" placeholder="Частота кадрів" type="text">
+                        <input id="product-angle" placeholder="Кут огляду" type="text">
+                       
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                    <button type="submit" class="btn btn-dark">Добавити</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Модальне вікно додавння інформації -->
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/b245f7814b.js" crossorigin="anonymous"></script>
+    <!-- Font awesome -->
+
+    <script src="js/product.js"></script>
+  
+    
+    <script src="js/deleteProduct.js"></script>
+   
+</body>
+
+</html>

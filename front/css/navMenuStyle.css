@@ -1,0 +1,90 @@
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+
+
+.modal .modal-header {
+  background-color: black;
+}
+
+.modal .modal-title {
+  color: white;
+}
+
+.navbar-nav .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+/*  */.input {
+  background-color: #212121;
+  max-width: 15rem;
+  height: 3rem;
+  padding: 1em;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+ margin-right: 2em;
+}
+
+.input:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+ /* navbar btn */
+
+
+.nav-button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+}
+
+.nav-button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+/* Стилі для випадаючого списку кнопки Входу/Реєстрації/В */
+
+.exit-button {
+  display: none;
+}
+
+/* Стилі для модального вікна додавання карточки товару */
+.modal-body input {
+  margin: 10px;
+}

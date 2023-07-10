@@ -1,0 +1,65 @@
+section {
+  margin: 50px;
+  padding: 50px;
+}
+
+.product-card {
+  margin: 10px 10px 10px 10px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+}
+
+.product-card:hover {
+  -webkit-box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.product-card .product-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-bottom-details {
+  border-top: 1px solid black;
+}
+
+.product-bottom-details .edit-button button {
+  background-color: white;
+  border: 0px;
+  visibility: hidden;
+}
+
+.product-card .product-event-price {
+  color: red;
+}
+
+/* Стилі для кнопки видалення кароточки товару */
+
+
+.next-page-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
